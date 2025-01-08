@@ -16,8 +16,9 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/data") // Backend URL
+      .get("http://54.146.235.84:8080/data") // Backend URL
       .then((response) => {
+        console.log("Data fetched:", response.data);
         setData(response.data);
         setFilteredData(response.data);
         setLoading(false);
